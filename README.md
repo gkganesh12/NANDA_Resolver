@@ -7,6 +7,9 @@
 A runnable proof-of-concept of the core [Project NANDA](https://nanda.media.mit.edu/)
 loop: **handle → signed AgentFacts → verified endpoint + capabilities**.
 
+**Live demo:** https://nanda-resolver.onrender.com (free-tier — first request
+after idle takes ~30s to wake the dyno).
+
 ```
 @acme:support/billing-bot
            │

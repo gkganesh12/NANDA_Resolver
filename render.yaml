@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: nanda-resolver
+    runtime: python
+    plan: free
+    buildCommand: "pip install -e ."
+    # NANDA_BASE_URL points the resolver at itself on the loopback so it
+    # doesn't round-trip through the public hostname when calling /index
+    # and /facts. The data/ directory ships in the repo, so no persistent
+    # disk is required.
+    startCommand: "NANDA_BASE_URL=http://127.0.0.1:$PORT uvicorn nanda.app:app --host 0.0.0.0 --port $PORT --proxy-headers --forwarded-allow-ips='*'"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+    healthCheckPath: /index/list
+    autoDeploy: true

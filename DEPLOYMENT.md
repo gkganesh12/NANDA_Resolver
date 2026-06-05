@@ -183,11 +183,53 @@ volumes:
 
 The app is one process and one port, so any PaaS works.
 
-**Render / Railway** — use the Dockerfile above, or set:
+**Render (recommended — one-click blueprint).** A `render.yaml` ships at the
+repo root, so deploying is:
+
+1. Push the repo to GitHub.
+2. Go to <https://dashboard.render.com/blueprints> → **New Blueprint Instance**.
+3. Connect this repo. Render reads `render.yaml` and provisions the web service.
+4. First build takes ~2 minutes. The URL appears as
+   `https://nanda-resolver.onrender.com` (or `nanda-resolver-<suffix>` if the
+   name is taken).
+
+The blueprint pins:
+
+- Build: `pip install -e .`
+- Start: `uvicorn nanda.app:app --host 0.0.0.0 --port $PORT --proxy-headers`
+- `NANDA_BASE_URL=http://127.0.0.1:$PORT` so the resolver's internal calls stay
+  on the loopback instead of bouncing through the public hostname.
+- Health check on `/index/list`.
+
+The seeded `data/` is committed to the repo, so no persistent disk is needed
+for the POC. The tamper demo restores the file within the same request, so
+ephemeral filesystem is fine.
+
+**Free-tier note:** Render's free web services sleep after ~15 min of
+inactivity; first request after a sleep takes ~30s to wake. Upgrade the plan
+in `render.yaml` (`plan: starter`) if that matters.
+
+**If you want persistence** (e.g. you plan to add `/admin/add-agent`): add a
+disk + env var to `render.yaml`:
+
+```yaml
+    disk:
+      name: nanda-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: NANDA_DATA_DIR
+        value: /data
+```
+
+Then run `nanda seed` once from Render's shell to populate the disk.
+
+**Railway** — use the Dockerfile above, or set:
 
 - Build command: `pip install -e .`
 - Start command: `uvicorn nanda.app:app --host 0.0.0.0 --port $PORT`
-- Add a persistent disk mounted at `/data` and set `NANDA_DATA_DIR=/data`
+- Add a persistent disk mounted at `/data` and set `NANDA_DATA_DIR=/data` if
+  you want persistence
 - Run `nanda seed` once from a one-off shell to populate the disk
 
 **Fly.io** — `fly launch` then deploy with the Dockerfile. Attach a volume:
