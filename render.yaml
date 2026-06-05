@@ -4,13 +4,15 @@ services:
     runtime: python
     plan: free
     buildCommand: "pip install -e ."
-    # NANDA_BASE_URL points the resolver at itself on the loopback so it
-    # doesn't round-trip through the public hostname when calling /index
-    # and /facts. The data/ directory ships in the repo, so no persistent
-    # disk is required.
-    startCommand: "NANDA_BASE_URL=http://127.0.0.1:$PORT uvicorn nanda.app:app --host 0.0.0.0 --port $PORT --proxy-headers --forwarded-allow-ips='*'"
+    # Bind uvicorn and the resolver's self-calls to the same fixed port.
+    # Render routes external traffic to whatever port the service binds to,
+    # so 10000 (Render's Python default) is fine. The seeded data/ ships in
+    # the repo, so no persistent disk is required.
+    startCommand: "uvicorn nanda.app:app --host 0.0.0.0 --port 10000 --proxy-headers --forwarded-allow-ips='*'"
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.9
+      - key: NANDA_BASE_URL
+        value: http://127.0.0.1:10000
     healthCheckPath: /index/list
     autoDeploy: true
