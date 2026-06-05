@@ -1,0 +1,49 @@
+{
+  "entries": [
+    {
+      "handle": "@acme:support/billing-bot",
+      "factsUrl": "http://127.0.0.1:8000/facts/acme-billing-bot.jsonld",
+      "operatorPublicKey": "oKEnwT8obhBJJfy4XEvNh5doNUlrHXCikJmBsMrO0zM="
+    },
+    {
+      "handle": "@acme:sales/onboarding",
+      "factsUrl": "http://127.0.0.1:8000/facts/acme-onboarding.jsonld",
+      "operatorPublicKey": "oKEnwT8obhBJJfy4XEvNh5doNUlrHXCikJmBsMrO0zM="
+    },
+    {
+      "handle": "@mercy-health:clinic/intake-triage",
+      "factsUrl": "http://127.0.0.1:8000/facts/mercy-intake-triage.jsonld",
+      "operatorPublicKey": "ktvE2yEKk+hEVSEgZuVmMIjPRCg594g8V8eivfm2YXw="
+    },
+    {
+      "handle": "@first-bank:security/fraud-alert",
+      "factsUrl": "http://127.0.0.1:8000/facts/firstbank-fraud-alert.jsonld",
+      "operatorPublicKey": "mhcg/Dqg+Ki4KTPuqiHYGXZ0HviT4cKLgLgXESBUTfQ="
+    },
+    {
+      "handle": "@paperstack:tools/pdf-summarizer",
+      "factsUrl": "http://127.0.0.1:8000/facts/paperstack-summarizer.jsonld",
+      "operatorPublicKey": "NLdCkWvBOT8Ezg1vur7nxZ9LA0qqdxOteIvhy/KAQIY="
+    },
+    {
+      "handle": "@paperstack:tools/translator",
+      "factsUrl": "http://127.0.0.1:8000/facts/paperstack-translator.jsonld",
+      "operatorPublicKey": "NLdCkWvBOT8Ezg1vur7nxZ9LA0qqdxOteIvhy/KAQIY="
+    },
+    {
+      "handle": "@city-transit:public/trip-planner",
+      "factsUrl": "http://127.0.0.1:8000/facts/transit-trip-planner.jsonld",
+      "operatorPublicKey": "FXNbN78yKMrE+GvYHjfflEovEGKnua8mjkJH6rVvufE="
+    },
+    {
+      "handle": "@indie-dev:hobby/recipe-bot",
+      "factsUrl": "http://127.0.0.1:8000/facts/indie-recipe-bot.jsonld",
+      "operatorPublicKey": "DVJnSUsJ1bL03B35FJ7Z7S7Ng2svWvyO8dfziSGmD6A="
+    },
+    {
+      "handle": "@lawfirm-co:legal/contract-review",
+      "factsUrl": "http://127.0.0.1:8000/facts/lawfirm-contract-review.jsonld",
+      "operatorPublicKey": "4YnV8WryWUGM3oa+QZPBKVITSAhbQAyf+l2ZZ0vb/KY="
+    }
+  ]
+}

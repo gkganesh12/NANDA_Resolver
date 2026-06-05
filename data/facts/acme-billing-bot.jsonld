@@ -1,0 +1,30 @@
+{
+  "@context": "https://nanda.local/v1/context.jsonld",
+  "type": "AgentFacts",
+  "id": "https://nanda.local/agents/acme-billing-bot",
+  "handle": "@acme:support/billing-bot",
+  "operatorName": "Acme Corp",
+  "endpoints": [
+    {
+      "endpointUrl": "https://acme.example/agents/billing",
+      "endpointProtocol": "https+a2a"
+    }
+  ],
+  "capabilities": [
+    {
+      "capabilityTag": "answer-billing-question",
+      "capabilityDescription": "Answer customer billing questions"
+    },
+    {
+      "capabilityTag": "issue-refund",
+      "capabilityDescription": "Issue a refund up to $500"
+    }
+  ],
+  "ttl": 3600,
+  "issuedAt": "2026-06-05T06:32:01Z",
+  "proof": {
+    "proofType": "Ed25519Signature2025-URDNA2015",
+    "verificationKey": "oKEnwT8obhBJJfy4XEvNh5doNUlrHXCikJmBsMrO0zM=",
+    "signatureValue": "H1JZx+aJb+jvaWnK5UKyH0/PYYlx33Qoh5Rl0q7DbKYSHQDT+5JVWSoQHTOKlwARPfwWkX0srVY+gQSrlcJbDw=="
+  }
+}

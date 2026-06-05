@@ -1,0 +1,26 @@
+{
+  "@context": "https://nanda.local/v1/context.jsonld",
+  "type": "AgentFacts",
+  "id": "https://nanda.local/agents/indie-recipe-bot",
+  "handle": "@indie-dev:hobby/recipe-bot",
+  "operatorName": "Indie Dev Solo",
+  "endpoints": [
+    {
+      "endpointUrl": "https://indie.example/agents/recipe",
+      "endpointProtocol": "https+a2a"
+    }
+  ],
+  "capabilities": [
+    {
+      "capabilityTag": "suggest-recipe",
+      "capabilityDescription": "Suggest a recipe from ingredients"
+    }
+  ],
+  "ttl": 3600,
+  "issuedAt": "2026-06-05T06:32:01Z",
+  "proof": {
+    "proofType": "Ed25519Signature2025-URDNA2015",
+    "verificationKey": "DVJnSUsJ1bL03B35FJ7Z7S7Ng2svWvyO8dfziSGmD6A=",
+    "signatureValue": "BNleoJluNYWzzLgLnjuI2tMI4b0Olk/y/ONK/WMt1q7BpRMER7zlxLsDkLxd9x5tqDusM3Sfo/LnIjSP+QZYBQ=="
+  }
+}

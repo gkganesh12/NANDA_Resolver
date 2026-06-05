@@ -1,0 +1,30 @@
+{
+  "@context": "https://nanda.local/v1/context.jsonld",
+  "type": "AgentFacts",
+  "id": "https://nanda.local/agents/mercy-intake-triage",
+  "handle": "@mercy-health:clinic/intake-triage",
+  "operatorName": "Mercy Health Network",
+  "endpoints": [
+    {
+      "endpointUrl": "https://mercy.example/agents/triage",
+      "endpointProtocol": "https+a2a"
+    }
+  ],
+  "capabilities": [
+    {
+      "capabilityTag": "triage-symptoms",
+      "capabilityDescription": "Assess symptom severity"
+    },
+    {
+      "capabilityTag": "book-appointment",
+      "capabilityDescription": "Book a clinic appointment"
+    }
+  ],
+  "ttl": 3600,
+  "issuedAt": "2026-06-05T06:32:01Z",
+  "proof": {
+    "proofType": "Ed25519Signature2025-URDNA2015",
+    "verificationKey": "ktvE2yEKk+hEVSEgZuVmMIjPRCg594g8V8eivfm2YXw=",
+    "signatureValue": "nZco9TDf9z1FKktmryyk5MSHd72Dah91++1uJEb/hSAEhcU1dn2B00WuDWJEM429p4ec9BlMn/hbJnP/szDNAw=="
+  }
+}

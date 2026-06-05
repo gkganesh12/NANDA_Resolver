@@ -1,0 +1,30 @@
+{
+  "@context": "https://nanda.local/v1/context.jsonld",
+  "type": "AgentFacts",
+  "id": "https://nanda.local/agents/acme-onboarding",
+  "handle": "@acme:sales/onboarding",
+  "operatorName": "Acme Corp",
+  "endpoints": [
+    {
+      "endpointUrl": "https://acme.example/agents/onboarding",
+      "endpointProtocol": "https+a2a"
+    }
+  ],
+  "capabilities": [
+    {
+      "capabilityTag": "schedule-demo",
+      "capabilityDescription": "Schedule a product demo"
+    },
+    {
+      "capabilityTag": "send-welcome-email",
+      "capabilityDescription": "Send a templated welcome email"
+    }
+  ],
+  "ttl": 3600,
+  "issuedAt": "2026-06-05T06:32:01Z",
+  "proof": {
+    "proofType": "Ed25519Signature2025-URDNA2015",
+    "verificationKey": "oKEnwT8obhBJJfy4XEvNh5doNUlrHXCikJmBsMrO0zM=",
+    "signatureValue": "ntZLYIUp12Y9vTN8D825g90oYTaEsnWmOq6eOlyRjFzH4I7hE8ZvqklDZZAjeKCl7YSQLOUC/eZwP6Fuk8TBDQ=="
+  }
+}

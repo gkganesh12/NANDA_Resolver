@@ -1,0 +1,30 @@
+{
+  "@context": "https://nanda.local/v1/context.jsonld",
+  "type": "AgentFacts",
+  "id": "https://nanda.local/agents/paperstack-summarizer",
+  "handle": "@paperstack:tools/pdf-summarizer",
+  "operatorName": "PaperStack Labs",
+  "endpoints": [
+    {
+      "endpointUrl": "https://paperstack.example/agents/summarize",
+      "endpointProtocol": "https+mcp"
+    }
+  ],
+  "capabilities": [
+    {
+      "capabilityTag": "summarize-pdf",
+      "capabilityDescription": "Summarize a PDF document"
+    },
+    {
+      "capabilityTag": "extract-citations",
+      "capabilityDescription": "Extract bibliographic citations"
+    }
+  ],
+  "ttl": 3600,
+  "issuedAt": "2026-06-05T06:32:01Z",
+  "proof": {
+    "proofType": "Ed25519Signature2025-URDNA2015",
+    "verificationKey": "NLdCkWvBOT8Ezg1vur7nxZ9LA0qqdxOteIvhy/KAQIY=",
+    "signatureValue": "WIMQe42/SUDe8ypAScEHoRa6cyed5YVY7tAW0EQCyn9msqWo4LGSqBF12rJZHWXX1qtDggs52q1oPEoe6OzUBg=="
+  }
+}

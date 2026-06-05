@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nanda.local/v1/",
+    "nanda": "https://nanda.local/v1/",
+    "id": "@id",
+    "type": "@type",
+    "AgentFacts": "nanda:AgentFacts",
+    "handle": "nanda:handle",
+    "operator": "nanda:operator",
+    "operatorName": "nanda:operatorName",
+    "endpoints": {"@id": "nanda:endpoints", "@container": "@set"},
+    "endpointUrl": "nanda:endpointUrl",
+    "endpointProtocol": "nanda:endpointProtocol",
+    "capabilities": {"@id": "nanda:capabilities", "@container": "@set"},
+    "capabilityTag": "nanda:capabilityTag",
+    "capabilityDescription": "nanda:capabilityDescription",
+    "ttl": "nanda:ttl",
+    "issuedAt": "nanda:issuedAt",
+    "proof": "nanda:proof",
+    "proofType": "nanda:proofType",
+    "verificationKey": "nanda:verificationKey",
+    "signatureValue": "nanda:signatureValue"
+  }
+}

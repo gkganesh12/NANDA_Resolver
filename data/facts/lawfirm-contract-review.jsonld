@@ -1,0 +1,30 @@
+{
+  "@context": "https://nanda.local/v1/context.jsonld",
+  "type": "AgentFacts",
+  "id": "https://nanda.local/agents/lawfirm-contract-review",
+  "handle": "@lawfirm-co:legal/contract-review",
+  "operatorName": "Lawfirm & Co",
+  "endpoints": [
+    {
+      "endpointUrl": "https://lawfirm.example/agents/contract",
+      "endpointProtocol": "https+a2a"
+    }
+  ],
+  "capabilities": [
+    {
+      "capabilityTag": "summarize-pdf",
+      "capabilityDescription": "Summarize a contract PDF"
+    },
+    {
+      "capabilityTag": "flag-risk-clause",
+      "capabilityDescription": "Flag risky contract clauses"
+    }
+  ],
+  "ttl": 3600,
+  "issuedAt": "2026-06-05T06:32:01Z",
+  "proof": {
+    "proofType": "Ed25519Signature2025-URDNA2015",
+    "verificationKey": "4YnV8WryWUGM3oa+QZPBKVITSAhbQAyf+l2ZZ0vb/KY=",
+    "signatureValue": "4DKkKsz3gYxLjd1+UzMtwjlQaWUTG0v8qKNTFZN0CCgD8mbNl1MZJ4T+yVFZlAG4hT2XX8f68dtGlk9a0hGzCA=="
+  }
+}

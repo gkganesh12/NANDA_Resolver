@@ -1,0 +1,30 @@
+{
+  "@context": "https://nanda.local/v1/context.jsonld",
+  "type": "AgentFacts",
+  "id": "https://nanda.local/agents/transit-trip-planner",
+  "handle": "@city-transit:public/trip-planner",
+  "operatorName": "City Transit Authority",
+  "endpoints": [
+    {
+      "endpointUrl": "https://transit.example/agents/plan",
+      "endpointProtocol": "https+a2a"
+    }
+  ],
+  "capabilities": [
+    {
+      "capabilityTag": "plan-trip",
+      "capabilityDescription": "Plan a multi-modal trip"
+    },
+    {
+      "capabilityTag": "check-service-alerts",
+      "capabilityDescription": "Check current service disruptions"
+    }
+  ],
+  "ttl": 3600,
+  "issuedAt": "2026-06-05T06:32:01Z",
+  "proof": {
+    "proofType": "Ed25519Signature2025-URDNA2015",
+    "verificationKey": "FXNbN78yKMrE+GvYHjfflEovEGKnua8mjkJH6rVvufE=",
+    "signatureValue": "qMSPvcstVCm7visJ3nPKEH1LlGB0gfZAup//e2qHBHI5fD1lP1yw1tN/4Y7fWKBRF5F7ti0cTxIE35kOikaPBg=="
+  }
+}

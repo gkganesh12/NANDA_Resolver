@@ -1,0 +1,30 @@
+{
+  "@context": "https://nanda.local/v1/context.jsonld",
+  "type": "AgentFacts",
+  "id": "https://nanda.local/agents/firstbank-fraud-alert",
+  "handle": "@first-bank:security/fraud-alert",
+  "operatorName": "First National Bank",
+  "endpoints": [
+    {
+      "endpointUrl": "https://firstbank.example/agents/fraud",
+      "endpointProtocol": "https+a2a"
+    }
+  ],
+  "capabilities": [
+    {
+      "capabilityTag": "flag-transaction",
+      "capabilityDescription": "Flag a suspicious transaction"
+    },
+    {
+      "capabilityTag": "freeze-card",
+      "capabilityDescription": "Temporarily freeze a card"
+    }
+  ],
+  "ttl": 3600,
+  "issuedAt": "2026-06-05T06:32:01Z",
+  "proof": {
+    "proofType": "Ed25519Signature2025-URDNA2015",
+    "verificationKey": "mhcg/Dqg+Ki4KTPuqiHYGXZ0HviT4cKLgLgXESBUTfQ=",
+    "signatureValue": "Zg1TS2ASgtkdwmR/GjGFGieGZmh6xy6DpNDxZPrnQ90iKVCBvSseC63Lojf4+fglFM3fodnXg9wjW56CL/ENCA=="
+  }
+}

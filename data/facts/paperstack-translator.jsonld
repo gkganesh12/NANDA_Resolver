@@ -1,0 +1,26 @@
+{
+  "@context": "https://nanda.local/v1/context.jsonld",
+  "type": "AgentFacts",
+  "id": "https://nanda.local/agents/paperstack-translator",
+  "handle": "@paperstack:tools/translator",
+  "operatorName": "PaperStack Labs",
+  "endpoints": [
+    {
+      "endpointUrl": "https://paperstack.example/agents/translate",
+      "endpointProtocol": "https+mcp"
+    }
+  ],
+  "capabilities": [
+    {
+      "capabilityTag": "translate-text",
+      "capabilityDescription": "Translate text between languages"
+    }
+  ],
+  "ttl": 3600,
+  "issuedAt": "2026-06-05T06:32:01Z",
+  "proof": {
+    "proofType": "Ed25519Signature2025-URDNA2015",
+    "verificationKey": "NLdCkWvBOT8Ezg1vur7nxZ9LA0qqdxOteIvhy/KAQIY=",
+    "signatureValue": "5575TFLDq94w0lCNfXkR3ACTGRCQPmHglgTUagEW6p9lq1RAAN+HOg5b85PALLX90jTWva/FNZuZGrbWyPMyBA=="
+  }
+}
